@@ -1,6 +1,7 @@
-import { CenteredCard } from "@/components";
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
+
+import { CenteredCard } from "@/components";
 
 const NotFound = () => {
   return (
@@ -11,7 +12,7 @@ const NotFound = () => {
           click the button below to go back to the homepage.
         </p>
 
-        <Button as={Link} to={"/"} color="primary" fullWidth>
+        <Button as={Link} color="primary" fullWidth to={"/"}>
           <strong>Go back to the homepage</strong>
         </Button>
       </div>

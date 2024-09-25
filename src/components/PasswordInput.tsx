@@ -1,5 +1,5 @@
 import { Input } from "@nextui-org/react";
-import { EyeOffIcon, EyeIcon, LockIcon } from "lucide-react";
+import { EyeIcon, EyeOffIcon, LockIcon } from "lucide-react";
 import { useState } from "react";
 
 interface PasswordInputProps {
@@ -16,19 +16,19 @@ export const PasswordInput = (props: PasswordInputProps) => {
   };
 
   const endContent = (
-    <button type="button" onClick={toggleVisibility}>
+    <button onClick={toggleVisibility} type="button">
       {isVisible ? <EyeOffIcon /> : <EyeIcon />}
     </button>
   );
 
   return (
     <Input
-      label={label || "Password"}
-      type={isVisible ? "text" : "password"}
-      name="password"
-      startContent={<LockIcon />}
       endContent={endContent}
       isRequired
+      label={label || "Password"}
+      name="password"
+      startContent={<LockIcon />}
+      type={isVisible ? "text" : "password"}
     />
   );
 };

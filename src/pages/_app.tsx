@@ -2,8 +2,8 @@ import { Outlet } from "react-router-dom";
 import { Toaster } from "sonner";
 import { SWRConfig } from "swr";
 
-import { Providers } from "@/provider";
 import http from "@/http";
+import { Providers } from "@/provider";
 
 const Layout = () => {
   return (

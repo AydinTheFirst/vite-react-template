@@ -1,11 +1,12 @@
-import { CenteredCard } from "@/components";
-import { PasswordInput } from "@/components/PasswordInput";
-import http from "@/http";
-import { sleep } from "@/utils";
 import { Button, CardFooter, Input, Link } from "@nextui-org/react";
 import { UserIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+
+import { CenteredCard } from "@/components";
+import { PasswordInput } from "@/components/PasswordInput";
+import http from "@/http";
+import { sleep } from "@/utils";
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -31,15 +32,15 @@ const Login = () => {
 
   return (
     <CenteredCard title="Login">
-      <form onSubmit={handleSubmit} className="grid gap-3">
+      <form className="grid gap-3" onSubmit={handleSubmit}>
         <Input
+          isRequired
           label="Username"
           name="username"
           startContent={<UserIcon />}
-          isRequired
         />
         <PasswordInput />
-        <Button type="submit" color="primary" fullWidth isLoading={isLoading}>
+        <Button color="primary" fullWidth isLoading={isLoading} type="submit">
           Login
         </Button>
       </form>

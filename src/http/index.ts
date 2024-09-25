@@ -38,7 +38,7 @@ http.handleError = (error) => {
     return toast.error("Forbidden");
   }
 
-  const { message, errors } = error.response.data;
+  const { errors, message } = error.response.data;
 
   return toast.error(message, {
     description: JSON.stringify(errors, null, 2),
