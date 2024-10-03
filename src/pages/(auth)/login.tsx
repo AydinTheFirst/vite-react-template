@@ -44,7 +44,7 @@ const Login = () => {
           Login
         </Button>
       </form>
-      <CardFooter className="justify-center flex-col">
+      <CardFooter className="flex-col justify-center">
         <p>Don't have an account?</p>
         <Link href="/register">Register</Link>
       </CardFooter>

@@ -52,7 +52,7 @@ const Register = () => {
           Register
         </Button>
       </form>
-      <CardFooter className="justify-center flex-col">
+      <CardFooter className="flex-col justify-center">
         <p>Already have an account?</p>
         <Link href="/login">Login</Link>
       </CardFooter>
