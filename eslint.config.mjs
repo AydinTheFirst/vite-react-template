@@ -11,7 +11,7 @@ export default tseslint.config(
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      perfectionist.configs["recommended-alphabetical"],
+      perfectionist.configs["recommended-natural"],
     ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {

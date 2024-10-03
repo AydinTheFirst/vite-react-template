@@ -1,3 +1,4 @@
+import { useTheme } from "next-themes";
 import { Outlet } from "react-router-dom";
 import { Toaster } from "sonner";
 import { SWRConfig } from "swr";
@@ -5,7 +6,11 @@ import { SWRConfig } from "swr";
 import http from "@/http";
 import { Providers } from "@/provider";
 
+type Theme = "dark" | "light" | "system";
+
 const Layout = () => {
+  const { theme } = useTheme();
+
   return (
     <>
       <Providers>
@@ -17,7 +22,7 @@ const Layout = () => {
         >
           <Outlet />
         </SWRConfig>
-        <Toaster richColors />
+        <Toaster richColors theme={theme as Theme} />
       </Providers>
     </>
   );
