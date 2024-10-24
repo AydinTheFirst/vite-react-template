@@ -1,9 +1,9 @@
 import axios from "axios";
 import { toast } from "sonner";
 
-import { VITE_API_URL } from "@/config";
+import { API_URL } from "@/config";
 
-const http = axios.create({ baseURL: VITE_API_URL });
+const http = axios.create({ baseURL: API_URL });
 
 const getToken = () => {
   if (typeof window === "undefined") return;
@@ -32,10 +32,6 @@ http.handleError = (error) => {
 
   if (error.response.status === 401) {
     return toast.error("Unauthorized");
-  }
-
-  if (error.response.status === 403) {
-    return toast.error("Forbidden");
   }
 
   const { errors, message } = error.response.data;
