@@ -1,5 +1,4 @@
 import { Button, CardFooter, Input, Link } from "@heroui/react";
-import { IdCardIcon, UserIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -32,21 +31,8 @@ const Register = () => {
   return (
     <CenteredCard title="Register">
       <form className="grid gap-3" onSubmit={handleSubmit}>
-        <Input
-          isRequired
-          label="Email"
-          name="email"
-          startContent={<UserIcon />}
-          type="email"
-        />
-
-        <Input
-          isRequired
-          label="Display Name"
-          name="displayName"
-          startContent={<IdCardIcon />}
-        />
-
+        <Input isRequired label="Email" name="email" type="email" />
+        <Input isRequired label="Display Name" name="displayName" />
         <PasswordInput />
         <Button color="primary" fullWidth isLoading={isLoading} type="submit">
           Register

@@ -1,5 +1,4 @@
 import { Button, CardFooter, Input, Link } from "@heroui/react";
-import { UserIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -33,12 +32,7 @@ const Login = () => {
   return (
     <CenteredCard title="Login">
       <form className="grid gap-3" onSubmit={handleSubmit}>
-        <Input
-          isRequired
-          label="Username"
-          name="username"
-          startContent={<UserIcon />}
-        />
+        <Input isRequired label="Username" name="username" />
         <PasswordInput />
         <Button color="primary" fullWidth isLoading={isLoading} type="submit">
           Login

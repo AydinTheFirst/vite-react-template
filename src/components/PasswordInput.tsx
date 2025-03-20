@@ -1,12 +1,8 @@
-import { Input } from "@heroui/react";
-import { EyeIcon, EyeOffIcon, LockIcon } from "lucide-react";
+import { Input, InputProps } from "@heroui/react";
+import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { useState } from "react";
 
-interface PasswordInputProps {
-  label?: string;
-}
-
-export const PasswordInput = (props: PasswordInputProps) => {
+export const PasswordInput = (props: InputProps) => {
   const { label } = props;
 
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +23,6 @@ export const PasswordInput = (props: PasswordInputProps) => {
       isRequired
       label={label || "Password"}
       name="password"
-      startContent={<LockIcon />}
       type={isVisible ? "text" : "password"}
     />
   );

@@ -1,3 +1,4 @@
+import { fixupPluginRules } from "@eslint/compat";
 import js from "@eslint/js";
 import perfectionist from "eslint-plugin-perfectionist";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -19,8 +20,8 @@ export default tseslint.config(
       globals: globals.browser,
     },
     plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      "react-hooks": fixupPluginRules(reactHooks),
+      "react-refresh": fixupPluginRules(reactRefresh),
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
