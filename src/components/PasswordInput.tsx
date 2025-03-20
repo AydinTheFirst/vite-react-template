@@ -1,4 +1,4 @@
-import { Input } from "@nextui-org/react";
+import { Input } from "@heroui/react";
 import { EyeIcon, EyeOffIcon, LockIcon } from "lucide-react";
 import { useState } from "react";
 
